@@ -1,0 +1,187 @@
+:root {
+    --main-color: #6950A1;
+    --sub-color: #EF5BA1;
+    
+    --background-dark-mode: rgb(27, 27, 30);
+    --text-dark-mode: rgb(255, 255, 255, 0.8);
+    --shadow-dark-mode-1: rgba(255,255,255,0.12);
+    --shadow-dark-mode-2: rgba(255,255,255,0.24);
+
+    --background-light-mode: #ffffff;
+    --text-light-mode: #231F20;
+    --shadow-light-mode-1: rgba(0,0,0,0.12);
+    --shadow-light-mode-2: rgba(0,0,0,0.24);
+}
+@font-face {
+    /* https://noonnu.cc/font_page/694 */
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    /* https://noonnu.cc/font_page/733 */
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 전역 */
+* { margin: 0px; padding: 0px; box-sizing: border-box; font-family: "Pretendard-Regular"; }
+html { font-size: 12px; }
+body { padding: 40px 0; transition: 0.5s all ease; font-size: 1.3rem; }
+pre { margin: 0px; background-color: var(--background-dark-mode); color: var(--text-dark-mode); }
+.light-mode pre { background-color: var(--background-light-mode); color: var(--text-light-mode); }
+table { color: var(--text-dark-mode); border: 1px solid var(--text-dark-mode); }
+.light-mode table { color: var(--text-light-mode); border: 1px solid var(--text-light-mode); }
+table th { background-color: transparent; border: 1px solid var(--text-dark-mode); }
+.light-mode table th { border: 1px solid var(--text-light-mode); }
+table tr:nth-child(even) { background-color: transparent; }
+table td { border: 1px solid var(--text-dark-mode); overflow-wrap: anywhere; }
+.light-mode  table td { border: 1px solid var(--text-light-mode); }
+/**************/
+/* 스크롤 설정 */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--main-color); border-radius: 10px; }
+/**************/
+.dark-mode { background-color: var(--background-dark-mode); color: var(--text-dark-mode); }
+.light-mode { background-color: var(--background-light-mode); color: var(--text-light-mode); }
+/* 템플릿 설정 */
+.cv { box-shadow: 0 1px 3px var(--shadow-dark-mode-1), 0 1px 2px var(--shadow-dark-mode-2); padding: 40px 0px 0px 0px; }
+.light-mode .cv { box-shadow: 0 1px 3px var(--shadow-light-mode-1), 0 1px 2px var(--shadow-light-mode-2); }
+/**************/
+/* 좌측 템플릿 설정 */
+.left-container { max-width: 100%; }
+.left-container { background-color: var(--background-dark-mode); padding: 0px; transition: 0.5s all ease; }
+.left-container > .avatar { background: var(--background-dark-mode); height: 300px; text-align: center; transition: 0.5s all ease; }
+.light-mode .left-container { background-color: var(--background-light-mode); }
+.light-mode .left-container > .avatar { background: var(--background-light-mode); }
+.left-container > .avatar > img { padding: 5px; border-radius: 50%; margin-top: 25px; background: #fff; max-width: 250px; height: 250px; }
+.left-container > .about { padding: 20px 15px; }
+.left-container > .about > .name-container { text-align: center; }
+.left-container > .about > .name-container > hr { border: 0; height: 1px; background-image: linear-gradient(to right, var(--background-dark-mode), var(--background-light-mode), var(--background-dark-mode)); }
+.light-mode .left-container > .about > .name-container > hr { background-image: linear-gradient(to right, var(--background-light-mode), var(--background-dark-mode), var(--background-light-mode)); }
+.left-container > .about > .contact-container { margin-top: 50px; }
+.left-container > .about > .contact-container > h3 { background-color: var(--main-color); box-shadow: 0 1px 4px var(--shadow-dark-mode-1); box-sizing: border-box; color: var(--text-dark-mode); margin: 0 0 24px 27px; padding: 4px 0 4px 12px; position: relative; width: 100%; }
+.light-mode .left-container > .about > .contact-container > h3 { box-shadow: 0 1px 4px var(--shadow-light-mode-1); }
+.left-container > .about > .contact-container > h3:before { color: var(--background-light-mode); content: ""; font-size: 26px; position: absolute; right: 12px; top: -2px; }
+.left-container > .about > .contact-container > h3:after { border-color: #263746 transparent transparent #263746; border-style: solid; border-width: 6px; bottom: -12px; content: ""; position: absolute; right: 0; }
+.left-container > .about > .contact-container > div { padding-left: 30px; }
+.left-container > .about > .contact-container > div > p { margin-top: 20px; display: flex; align-items: center; }
+.left-container > .about > .contact-container > div > p > span { padding: 10px; }
+.left-container > .about > .contact-container > div > p > span > a { transition: all 0.2s ease-in-out; }
+.light-mode .left-container > .about > .contact-container > div > p > span > a { color: var(--text-light-mode); }
+.left-container > .about > .contact-container > div > p > span > a:hover { font-size: 1.5rem; text-decoration: none; }
+.left-container > .about > .contact-container > div > p > span > a:focus, .left-container > .about > .contact-container > div > p > span > a:visited { text-decoration: none; }
+.left-container > .about > .contact-container > div > p > span > a { color: var(--text-dark-mode); }
+.left-container > .about > .contact-container > div > p > .circle { border: 2px solid var(--text-dark-mode); border-radius: 50%; }
+.light-mode .left-container > .about > .contact-container > div > p > .circle { border: 2px solid var(--text-light-mode); }
+/**************/
+/* 우측 템플릿 설정 */
+.right-container { padding-right: 0px; max-width: 100%; }
+.right-container > div { margin: 20px 0px; }
+/* 프로젝트 */
+.right-container > div > div > p { color: var(--main-color); }
+.right-container > div > div > p > span { font-size: 2rem; font-weight: bold; text-transform: uppercase; padding: 0px 0px 0px 10px; }
+.right-container > div > div > hr { border: 1px dashed var(--text-dark-mode); }
+.light-mode .right-container > div > div > hr { border: 1px dashed var(--text-light-mode); }
+.right-container > div > div > .row { margin: 0px 0px 10px 0px; }
+.right-container > div > div > .row > div > .project-year { font-size: 1.8rem; display: flex; align-items: center; justify-content: start; padding: 7px 10px; color: var(--main-color); border-bottom: 1px solid #6950a170; }
+.right-container > div > div > .row > div > .project-list { display: block; padding: 15px 0px; }
+.right-container > div > div > .row > div > .project-list > .row { margin: 0px 0px 10px 0px; }
+.right-container > div > div > .row > div > .project-list > .row > div > .project-name { font-size: 1.3rem; margin: 0px; }
+.right-container > div > div > .row > div > .project-list > .row > div > .project-name > i { font-size: 0.8rem; color: rgba(117,117,117,.9); }
+.right-container > div > div > .row > div > .project-list > .row > div > li { color: var(--text-dark-mode); font-size: 1rem; }
+.light-mode .right-container > div > div > .row > div > .project-list > .row > div > li { color: var(--text-light-mode); font-size: 1rem; }
+/* 경력 */
+.right-container > div > div > div > div > .job { margin: 0px; }
+.right-container > div > div > .row > div > .date > i { font-size: 0.8rem; color: rgba(117,117,117,.9); }
+/* 기술 */
+.right-container > div > div > .skill-container { display: grid; grid-gap: 5px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: stretch; justify-content: center; padding: 5px; }
+.right-container > div > div > .skill-container > div { font-size: 1.3rem; text-align: center; padding: 0.5em 0; }
+.right-container > div > div > .skill-container > div > a { transition: all 0.2s ease-in-out; color: var(--sub-color); }
+.right-container > div > div > .skill-container > div > a:hover { font-size: 1.5rem; text-decoration: none; color: var(--sub-color); }
+.right-container > div > div > .skill-container > div > a:visited, .right-container > div > div > .skill-container > div > a:focus { text-decoration: none; color: var(--sub-color); }
+/* 지식 */
+.right-container > div > div > .row > div > .project-list > .row > div > .skill-container { display: grid; grid-gap: 5px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: stretch; justify-content: center; padding: 5px; }
+.right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div { font-size: 1.3rem; text-align: center; padding: 0.5em 0; }
+.right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a { transition: all 0.2s ease-in-out; color: var(--text-dark-mode); }
+.right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:hover { font-size: 1.5rem; text-decoration: none; color: var(--text-dark-mode); }
+.right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:visited, .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:focus { text-decoration: none; outline: none; color: var(--text-dark-mode); }
+.light-mode .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a { color: var(--text-light-mode); }
+.light-mode .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:hover { color: var(--text-light-mode); }
+.light-mode .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:visited, .light-mode .right-container .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:focus { color: var(--text-light-mode); }
+/**************/
+/* 모드 스위치 */
+.mode-switch-container { margin: 0px; display: flex; align-items: center; justify-content: end; }
+.mode-switch-container > p { margin: 0px; padding-right: 10px; font-size: 1.5rem; }
+.mode-switch-container > .mode-switch { cursor: pointer; color: var(--text-dark-mode); width: 70px; height: 30px; background: var(--main-color); border-radius: 50px; position: relative; }
+.mode-switch-container > .mode-switch > .switch { background: var(--background-dark-mode); width: 24px; height: 24px; border-radius: 100%; position: absolute; top: 3px; left: 4px; transition: 0.5s all ease; }
+.light-mode .mode-switch-container > .mode-switch > .switch { background: var(--background-light-mode); }
+.light-mode .mode-switch-container > .mode-switch > .switch { transform: translateX(37px); }
+/**************/
+/* 포스트 리스트 */
+.home { font-size: 1.5rem; cursor: pointer; transition: all 0.2s ease-in-out; }
+.home > span { padding: 0px 10px; font-size: 1.5rem; }
+.home:hover { transform: translateY(-2px); }
+.post-container { border: 1px solid var(--text-dark-mode); border-radius: 15px; padding: 15px 20px; margin: 15px 0px; cursor: pointer; transition: all 0.1s ease-in-out; box-shadow: 0 1px 3px var(--shadow-dark-mode-1), 0 1px 2px var(--shadow-dark-mode-2); }
+.post-container:hover { transform: translateY(-2px); box-shadow: 0 14px 28px var(--shadow-dark-mode-1), 0 10px 10px var(--shadow-dark-mode-2); }
+.light-mode .post-container { border: 1px solid var(--text-light-mode); box-shadow: 0 1px 3px var(--shadow-light-mode-1), 0 1px 2px var(--shadow-light-mode-2); }
+.light-mode .post-container:hover { box-shadow: 0 14px 28px var(--shadow-light-mode-1), 0 10px 10px var(--shadow-light-mode-2); }
+.post-container > .post-title { font-weight: bold; font-size: 2rem; margin-bottom: 0.2rem; }
+.post-container > .post-tag { font-size: 1rem; margin-bottom: 0.2rem; }
+.post-container > p > i { margin-right: 3px; }
+.post-container > .post-date { font-size: 1rem; margin-bottom: 0.2rem; }
+.post-container > .post-content { filter: brightness(0.7); margin: 0px; }
+.pagination > a { padding: 10px 5px; font-size: 1.5rem; filter: brightness(0.8); color: var(--text-dark-mode); }
+.light-mode .pagination > a { color: var(--text-light-mode); }
+.pagination > a:hover:not(.current-page) { color: var(--text-dark-mode); transform: translateY(-2px); }
+.pagination > a:visited, .pagination > a:focus { color: var(--text-dark-mode); }
+.light-mode .pagination > a:hover:not(.current-page) { color: var(--text-light-mode); }
+.light-mode .pagination > a:visited, .pagination > a:focus { color: var(--text-light-mode); }
+.pagination > .current-page { font-weight: bold; filter: none; color: var(--main-color); }
+.search-bar-container { padding: 20px 0px; }
+.search-bar-container > #search-bar { font-size: 1.5rem; width: 100%; }
+.search-bar-container > #search-bar > input { border-radius: 15px; padding: 5px 15px; }
+.search-bar-container > #results-container { margin-top: 10px; }
+.search-bar-container > #results-container > div { padding: 10px 15px; font-size: 1.5rem; border: 1px solid var(--text-dark-mode); transition: all 0.1s ease-in-out; border-radius: 15px; }
+.search-bar-container > #results-container > div:hover { transform: translateY(-2px); box-shadow: 0 14px 28px var(--shadow-dark-mode-1), 0 10px 10px var(--shadow-dark-mode-2);}
+.light-mode .search-bar-container > #results-container > div { border: 1px solid var(--text-light-mode); }
+.light-mode .search-bar-container > #results-container > div:hover { box-shadow: 0 14px 28px var(--shadow-light-mode-1), 0 10px 10px var(--shadow-light-mode-2);}
+/* .search-bar-container > #results-container > .result-post > .result-title { color: var(--sub-color); } */
+.search-bar-container > #results-container > .result-post { background-color: var(--main-color); }
+.search-bar-container > #results-container > .result-post > .result-tag { font-size: 1rem; }
+.search-bar-container > #results-container > .result-post > .result-date { font-size: 1rem; }
+.search-bar-container > #results-container > .result-post > p > i { margin-right: 3px; }
+/**************/
+/* 포스트 */
+.post-content-container > .post-title { padding-top: 30px; text-align: center; color: var(--text-dark-mode); font-weight: bold; font-size: 2.5rem; }
+.light-mode .post-content-container > .post-title { color: var(--text-light-mode); }
+.post-content-container > .post-date { text-align: center; margin: 0px; }
+.post-content-container > .post-tags { text-align: center; margin: 0px; }
+.post-content-container > .post-date > i, .post-content-container > .post-tags > i { margin-right: 5px; }
+
+.post-content-container > h1 { padding-top: 30px; color: var(--main-color); font-size: 2rem; }
+.post-content-container > h2 { color: var(--sub-color); font-weight: lighter; font-size: 1.5rem; }
+.post-content-container > p:has(img + em) { display: inline-grid; }
+.post-content-container > p:has(img + em) > em { text-align: center; font-style: normal; font-size: 0.8rem; filter: brightness(0.6); }
+.highlighter-rouge > .highlight { position: relative; }
+.highlighter-rouge > .highlight > pre { background: var(--background-dark-mode); color: var(--text-dark-mode); border: 1px solid var(--text-dark-mode); }
+.light-mode .highlighter-rouge > .highlight > pre { background: var(--background-light-mode); color: var(--text-light-mode); border: 1px solid var(--text-light-mode); }
+.highlighter-rouge > .highlight > pre > code { background-color: transparent; font-size: 1rem; }
+/**************/
+/* 코드블럭 */
+.rouge-table { border: none!important; margin: 0px; }
+.rouge-gutter { padding: 0px; border: none!important; }
+.rouge-gutter > pre { border-top: none; border-right: 1px solid; border-bottom: none; border-left: 0px; border-radius: 0px; }
+.rouge-code { padding: 0px; border: none!important; }
+.rouge-code > pre { border: none!important; }
+pre > code { background-color: transparent; }
+/**************/
+@media (max-width: 979px) { html { font-size: 12px; } .mode-switch-container { justify-content: center; } }
+@media (max-width: 768px) { body { padding: 40px 0px; } .cv { max-width: unset; } .mode-switch-container { justify-content: center; } .left-container > .about > .contact-container > h3 { margin: 0 0 10px 0; padding: 4px 0 4px 12px; } .left-container > .about > .contact-container > h3:after { display: none; } .left-container > .about > .contact-container > h3:before { right: 0; top: -2px; } }
+@media screen and (max-width: 435px) { .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:visited, .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div { padding: 0px; } .right-container > div > div > .row > div > .project-list > .row > div > .skill-container > div > a:visited, .right-container > div > div > .row > div > .project-list > .row > div > .skill-container { width: inherit; } }
+
+.code-header { display: flex; justify-content: flex-end; position: absolute; top: 5px; right: 3px; }
+.copy-code-button { display: grid; grid-auto-flow: column; align-items: center; grid-column-gap: 4px; cursor: pointer; font-size: 1.2rem; padding: 4px 8px; font-weight: 900; color: var(--text-dark-mode); top: 0px; position: absolute; border: none; background-color: transparent; }
+.copy-code-button:hover { filter: brightness(0.5); }
