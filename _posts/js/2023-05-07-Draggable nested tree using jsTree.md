@@ -1,10 +1,19 @@
 ---
-title       : "Hierarchical folder tree"
+title       : "Draggable nested tree using jsTree"
 date        : 2023-05-07 19:53
 categories  : [js]
 tags        : [jstree, dnd, contextmenu, tree]
 img_path    : /assets/img/posts/js
 ---
+
+## Overview
+
+<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="QWZQvpL" data-user="ejinu" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ejinu/pen/QWZQvpL">
+  draggable nested tree using jsTree</a> by ejinu (<a href="https://codepen.io/ejinu">@ejinu</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## jsTree
 
@@ -398,12 +407,3 @@ $("#tree").on('select_node.jstree', function (e, d) {
     }
 });
 ```
-
-## Demo
-
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="QWZQvpL" data-user="ejinu" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/ejinu/pen/QWZQvpL">
-  draggable nested tree using jsTree</a> by ejinu (<a href="https://codepen.io/ejinu">@ejinu</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
